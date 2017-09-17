@@ -1,0 +1,180 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+@-webkit-keyframes bg_animation {
+	0% {background-position: 0% 50%}
+	50% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
+}
+
+@-webkit-keyframes scale_ani {
+	0% {
+		transform: scale(.95);
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+	}
+	100% {
+		transform: scale(1);
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+	}
+}
+
+*{ margin: 0; padding: 0; font-family: 'Roboto', sans-serif;}
+
+body{
+	background: linear-gradient(45deg, #0D2739, #177DC5);
+	background-size: 400% 400%;
+	-webkit-animation: bg_animation 20s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+	animation: bg_animation 20s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+	overflow: hidden;
+}
+
+#all_items{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 100px;
+}
+
+#content{
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+
+.background_video {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #212121;
+  overflow: hidden;
+  object-fit: cover;
+  z-index: -999;
+}
+
+.day-match{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	margin-top: 20px;
+	display: none;
+}
+
+.day-match.onscreen{
+	display: block;
+}
+
+.match{
+	position: relative;
+	width: 60%;
+	height: 120px;
+	margin: 0 auto;
+  margin-bottom: 10px;
+	background: rgba(255, 255, 255, .6);
+	transform: scale(.95);
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	z-index: -1;
+}
+
+.match.current{
+	position: relative;
+	transform: scale(1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	z-index: 999;
+	-webkit-animation: scale_ani .375s cubic-bezier(0.4, 0.0, 0.2, 1);
+	animation: scale_ani .375s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.team1, .team2{
+	position: absolute;
+	height: 120px;
+	width: 120px;
+	background: url('http://i.imgur.com/A2b52Kl.png');
+	background-size: cover;
+}
+
+.team1{
+	left: 10px;
+}
+
+.team2{
+	right: 10px;
+}
+
+.score{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 40px;
+	color: #212121;
+	color: rgba(0, 0, 0, .78);
+}
+
+.teamdetails{
+	position: absolute;
+	top: 160px;
+	height: 420px;
+	width: 400px;
+	background: rgba(0, 0, 0, .75);
+}
+
+.teamdetails.team1_details{
+	left: 8%;
+}
+
+.teamdetails.team2_details{
+	right: 8%;
+}
+
+/*SPL Logos*/
+
+/* NA */
+.ALG{ background: url('http://i.imgur.com/4fHmWbW.png'); background-size: cover;}
+.SS{ background: url('http://i.imgur.com/yai0XsT.png'); background-size: cover;}
+.LG{ background: url('http://i.imgur.com/nIe3hPA.png'); background-size: cover;}
+.EU{ background: url('http://i.imgur.com/hL0SGSM.png'); background-size: cover;}
+.TRI{ background: url('http://i.imgur.com/vST3Z2y.png'); background-size: cover;}
+.NOB{ background: url('http://i.imgur.com/3snw5cF.png'); background-size: cover;}
+.SPL{ background: url('https://i.imgur.com/V1iKquF.png'); background-size: cover;}
+.AMS{ background: url('https://i.imgur.com/Xyc33Yf.png'); background-size: cover;}
+
+
+/* EU */
+.VAC{ background: url('https://i.imgur.com/6xyRxHa.png'); background-size: cover;} 
+.RIV{ background: url('http://i.imgur.com/YwCf8Pn.png'); background-size: cover;}
+.DIG{ background: url('http://i.imgur.com/J137kpb.png'); background-size: cover;}
+.ELE{ background: url('http://i.imgur.com/2466P5F.png'); background-size: cover;}
+.OBEY{ background: url('http://i.imgur.com/oaPtqEp.png'); background-size: cover;}
+.BUR{ background: url('http://i.imgur.com/icJxn5D.png'); background-size: cover;}
+.NRG{ background: url('http://i.imgur.com/knLZaru.png'); background-size: cover;}
+.PAPIS{ background: url('http://i.imgur.com/6snyo5m.png'); background-size: cover;}
+
+
+
+
+/*SPL TEAM*/
+
+/* NA */
+.ALGTeam{ background: url('https://i.imgur.com/793BCNY.png'); background-size: cover;}
+.SSTeam{ background: url('https://i.imgur.com/btG5LOo.png'); background-size: cover;}
+.LGTeam{ background: url('https://i.imgur.com/EjE7sWS.png'); background-size: cover;}
+.TRITeam{ background: url('https://i.imgur.com/zxPLqXT.png'); background-size: cover;}
+.EUTeam{ background: url('https://i.imgur.com/u1oMbM4.png'); background-size: cover;}
+.NOBTeam{ background: url('https://i.imgur.com/0XVN1cg.png'); background-size: cover;}
+.SPLTeam{ background: url('https://i.imgur.com/2YVaeHA.png'); background-size: cover;}
+.AMSTeam{ background: url('https://i.imgur.com/4RgkIIv.png'); background-size: cover;}
+
+/* EU */
+.VACTeam{ background: url('https://i.imgur.com/3HMc9s5.png'); background-size: cover;}
+.RIVTeam{ background: url('https://i.imgur.com/p6tYhLb.png'); background-size: cover;}
+.DIGTeam{ background: url('https://i.imgur.com/gubtJIC.png'); background-size: cover;}
+.ELETeam{ background: url('https://i.imgur.com/ZSDxYJp.png'); background-size: cover;}
+.OBEYTeam{ background: url('https://i.imgur.com/XrugvF0.png'); background-size: cover;}
+.BURTeam{ background: url('https://i.imgur.com/P7gTTgl.png'); background-size: cover;}
+.NRGTeam{ background: url('https://i.imgur.com/xvYhR2D.png'); background-size: cover;}
+.PAPISTeam{ background: url('https://i.imgur.com/0vPzDSK.png'); background-size: cover;}
+
+
