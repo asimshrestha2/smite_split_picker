@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    </head>
+    <style>
+        *{ margin: 0; padding: 0; font-family: 'Roboto', sans-serif;}
+        .team-profile{
+            color: #ffffff;
+            width: 400px;
+            height: 420px;
+            background: rgba(14, 14, 14, 0.5);
+        }
+
+        .team-profile .header{
+            position: relative;
+            height: 90px;
+            background: rgba(14, 14, 14, 0.5);
+        }
+
+        .team-profile .header .logo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px;
+        }
+
+        
+        .team-profile .header .title{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100px;
+            padding: 2.5px;
+            font-size: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-profile .header .logo img{
+            width: 80px;
+            height: 80px;
+        }
+
+        .team-profile .player{
+            position: relative;
+            height: 65px;
+        }
+
+        .team-profile .player .logo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px 15px;
+        }
+
+        .team-profile .player .text{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100px;
+            padding: 2.5px;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-profile .player .text .sub-title{
+            font-size: 16px;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .team-profile .player .logo img{
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+    <body>
+        <div class="team-profile">
+            <div class="header">
+                <div class="logo">
+                    <img src="https://web2.hirez.com/smite-esports//wp-content/uploads/2016/03/2016-Noble.png" alt="">
+                </div>
+                <div class="title">ABC</div>
+            </div>
+            <div class="player hunter">
+                <div class="logo"><img src="imgs/role_logos/Hunter.png" alt=""></div>
+                <div class="text">
+                    <div class="title">ABC</div>
+                    <div class="sub-title">Hunter</div>
+                </div>
+            </div>
+            <div class="player guardian">
+                <div class="logo"><img src="imgs/role_logos/Guardian.png" alt=""></div>
+                <div class="text">
+                    <div class="title">ABC</div>
+                    <div class="sub-title">Guardian</div>
+                </div>
+            </div>
+            <div class="player mid">
+                <div class="logo"><img src="imgs/role_logos/Mage.png" alt=""></div>
+                <div class="text">
+                    <div class="title">ABC</div>
+                    <div class="sub-title">Mid</div>
+                </div>
+            </div>
+            <div class="player jungler">
+                <div class="logo"><img src="imgs/role_logos/Assassin.png" alt=""></div>
+                <div class="text">
+                    <div class="title">ABC</div>
+                    <div class="sub-title">Jungler</div>
+                </div>
+            </div>
+            <div class="player solo">
+                <div class="logo"><img src="imgs/role_logos/Warrior.png" alt=""></div>
+                <div class="text">
+                    <div class="title">ABC</div>
+                    <div class="sub-title">Solo</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

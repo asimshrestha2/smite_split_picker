@@ -10,17 +10,7 @@ var matches =
     [['SPL', 'SS', ''], ['ALG', 'LG', ''], ['AMS', 'NOB', ''], ['EU', 'TRI', '']], //SPL SUN
     ];
 
-
-$(document).ready(function(){
-  //TEST ONLY
-  //setTimeout(function () {
-  //  window.location.reload();
-  //}, 5000);
-
-  //console.log(matches);
-  //var vid = document.getElementById("bg_vod");
-  //vid.playbackRate = 0.2;
-
+document.addEventListener("DOMContentLoaded", function(){
   var html = "";
   for (var i = 0; i < matches.length; i++) {
     html = html + "\t<div class = \"day-match\">\n";
@@ -32,7 +22,7 @@ $(document).ready(function(){
       html = html + "\t\t</div>\n";
     }
     html = html + "\t</div>\n";
-    //console.log(html);
+    console.log(html);
   }
   $("#content").html(html);
   setDayMatch(id_day);
@@ -71,25 +61,25 @@ $(document).keydown(function (e) {
       changeDetails(id_match, id_day, matches);
       break;
     case 49: //1
-      $(".current .score").text("2 : 0");
+      document.querySelector(".current .score").innerText = "2 : 0";
       break;
     case 50: //2
-      $(".current .score").text("1 : 1");
+      document.querySelector(".current .score").innerText = "1 : 1";
       break;
     case 51: //3
-      $(".current .score").text("0 : 2");
+      document.querySelector(".current .score").innerText = "0 : 2";
       break;
     case 52: //4
-      $(".current .score").text("0 : 0");
+      document.querySelector(".current .score").innerText = "0 : 0";
       break;
     case 53: //5
-      $(".current .score").text("  -  ");
+      document.querySelector(".current .score").innerText = "  -  ";
       break;
     case 54: //6
-      $(".current .score").text("Win - Lose");
+      document.querySelector(".current .score").innerText = "Win - Lose";
       break;
     case 55: //7
-      $(".current .score").text("Lose - Win");
+      document.querySelector(".current .score").innerText = "Lose - Win";
       break;
   }
   console.log("Match: "+id_match);
@@ -125,7 +115,7 @@ function previousMatchDay(id_day) {
 
 
 function nextMatch(id_match, id_day) {
-  console.log(matches[id_day].length - 1);
+  // console.log(matches[id_day].length - 1);
   if (id_match != (matches[id_day].length-1)) {
     $(".onscreen .match").eq(id_match).removeClass("current");
     id_match++;
@@ -156,7 +146,7 @@ function changeDetails(id_match, id_day, matches) {
     var team2Class = matches[id_day][id_match][1]+"Team";
     tempClass[0] = team1Class;
     tempClass[1] = team2Class;
-    console.log("Team1" + team1Class + "Team2" + team2Class);
+    // console.log("Team1" + team1Class + "Team2" + team2Class);
     $(".team1_details").addClass(team1Class);
     $(".team2_details").addClass(team2Class);
   });
